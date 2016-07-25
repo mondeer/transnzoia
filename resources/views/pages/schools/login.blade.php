@@ -70,9 +70,8 @@
   							<div class="fh5co-cover-intro text-center">
                   <h1 class="cover-text-lead">Why use the portal?</h1>
                   <div class="cover-text-sublead wow fadeInUp">
-                    <h2 class="cover-text-sublead wow fadeInUp">This online students' portal helps students access fundamental services
-                      offered in the polytechnics. You can now access your fee statement, posted exam results, register units,
-                      track status of your student ID processing and so much more. Take this opportunity to enjoy improved service delivery! </h2>
+                    <h2 class="cover-text-sublead wow fadeInUp">This online schools' portal helps schools manage fundamental services
+                      offered in the polytechnics. This includes fee processing, academics related functions among other aspects </h2>
                   </div>
 
 

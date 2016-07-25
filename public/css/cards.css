@@ -25,6 +25,12 @@ html.mobile-menu-expanded {
   overflow: hidden;
 }
 
+.imonda {
+  font-family: Lato;
+  font-size: 100;
+  background-color: #2A3F54;
+}
+
 .imond {
   background-image: url('/images/full.jpg');
 }
@@ -618,7 +624,7 @@ a:hover .lnk-icon-right {
   position: absolute;
   z-index: 8;
   width: 100%;
-  margin-top: 40px;
+  margin-top: 0px;
 }
 @media screen and (max-width: 768px) {
   .fh5co-nav-style-1, .fh5co-nav-style-2 {
@@ -696,7 +702,7 @@ a:hover .lnk-icon-right {
   text-decoration: none;
 }
 .fh5co-nav-style-1 .fh5co-link-wrap ul li a.call-to-action, .fh5co-nav-style-2 .fh5co-link-wrap ul li a.call-to-action {
-  margin-top: 2px;
+  margin-top: 12px;
   border: 2px solid #58ca7e;
   background: #58ca7e;
   padding: 2px 15px !important;

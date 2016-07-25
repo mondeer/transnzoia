@@ -33,7 +33,7 @@ class SchoolController extends Controller
     //   $role = Sentinel::findRoleBySlug('admin');
     //   $role->users()->attach($user);
 
-      dd($school);
+      return ($school);
     }
 
     public function login(){

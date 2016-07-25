@@ -27,8 +27,11 @@
               <!-- Bootstrap -->
         <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
 
+        <!-- cards css -->
+        <!-- <link rel="stylesheet" href="{{ asset ('/css/cards.css')}}" media="screen" title="no title"> -->
+
         <!-- Google Font -->
-        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Junction">
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Jun">
 
         {!! Charts::assets() !!}
 
@@ -43,7 +46,8 @@
     </head>
 
     <body class="nav-md">
-        <div class="container body">
+        <div class="container body has-header">
+
             <div class="main_container">
 
                 @include('pages/schools/includes/sidebar')

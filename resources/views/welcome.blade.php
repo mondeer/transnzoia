@@ -20,6 +20,9 @@
       	<link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="/css/font-awesome.min.css" media="screen" title="no title">
 
+        <!-- Google Font -->
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:100">
+
       	<!-- Cards -->
       	<link rel="stylesheet" href="css/cards.css">
 
@@ -27,23 +30,74 @@
 
     </head>
     <div id="fh5co-page">
-  		<nav class="fh5co-nav-style-1" role="navigation" data-offcanvass-position="fh5co-offcanvass-left">
+
+      <nav class="fh5co-nav-style-1" role="navigation" data-offcanvass-position="fh5co-offcanvass-left">
+  			<div class="container">
+          <div class="row">
+
+            <div class="col-lg-12 text-center col-md-3 col-sm-3 col-xs-12 fh5co-logo">
+    					<a href="#" class="js-fh5co-mobile-toggle fh5co-nav-toggle"><i></i></a>
+    					<a href="/"><i class="fa fa-graduation-cap"></i> Trans Nzoia County Education System</a>
+    				</div>
+
+          </div>
+
+          <div class="row">
+            <div class="col-lg-12">
+      				<div class="solidline">
+      				</div>
+      			</div>
+          </div>
+
+          <div class="row">
+
+            <div class="col-lg-6 col-md-5 col-sm-5 text-center fh5co-link-wrap">
+              <ul data-offcanvass="yes">
+                <li class="active"><a href="#">Tour The County</a></li>
+                <li><a href="#">County Blog</a></li>
+                <li><a href="#">Registered Schools</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-4 pull-right text-right fh5co-link-wrap">
+              @if(Sentinel::check())
+              <ul class="fh5co-special" data-offcanvass="yes">
+                <li><a href="{{url ('/pages/students/profile')}}" class="call-to-action">Student Portal</a></li>
+                <li><a href="{{url ('/pages/schools/profile')}}" class="call-to-action">School Portal</a></li>
+                <li><a href="#" class="call-to-action">Tour The County</a></li>
+              </ul>
+              @else
+              <ul class="fh5co-special" data-offcanvass="yes">
+                <li><a href="{{url ('/students/login')}}" class="call-to-action">Student Login</a></li>
+                <li><a href="#" class="call-to-action">Staff Login</a></li>
+                <li><a href="/pages/schools/login" class="call-to-action">Admin Login</a></li>
+              </ul>
+              @endif
+            </div>
+
+          </div>
+
+
+  			</div>
+  		</nav>
+
+      <!-- <nav class="fh5co-nav-style-1" role="navigation" data-offcanvass-position="fh5co-offcanvass-left">
   			<div class="container">
   				<div class="col-lg-6 col-md-6 col-sm-3 col-xs-12 fh5co-logo">
   					<a href="#"><i class="fa fa-graduation-cap"></i> Trans Nzoia County Education System</a>
   				</div>
-  				<!-- <div class="col-lg-6 col-md-5 col-sm-5 text-center fh5co-link-wrap">
+  				<div class="col-lg-6 col-md-5 col-sm-5 text-center fh5co-link-wrap">
   					<ul data-offcanvass="yes">
   						<li class="active"><a href="#">Tour</a></li>
   						<li><a href="#">Explore</a></li>
   						<li><a href="#">Blog</a></li>
   						<li><a href="#">Pricing</a></li>
   					</ul>
-  				</div> -->
+  				</div>
   				<div class="col-lg-6 col-md-6 col-sm-4 pull-right text-right fh5co-link-wrap">
             @if(Sentinel::check())
             <ul class="fh5co-special" data-offcanvass="yes">
               <li><a href="{{url ('/pages/students/profile')}}" class="call-to-action">Student Portal</a></li>
+              <li><a href="{{url ('/pages/schools/profile')}}" class="call-to-action">School Portal</a></li>
               <li><a href="#" class="call-to-action">Tour The County</a></li>
             </ul>
             @else
@@ -55,7 +109,7 @@
             @endif
   				</div>
   			</div>
-  		</nav>
+  		</nav> -->
 
 
   		<div class="fh5co-cover fh5co-cover-style-2 js-full-height imond" data-stellar-background-ratio="0.5" data-next="yes">
