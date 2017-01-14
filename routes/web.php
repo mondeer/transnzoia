@@ -42,3 +42,5 @@ Route::get('/students/charts', 'StudentController@charts');
 Route::get('/schools/create', 'SchoolController@create');
 
 Route::post('/schools/create', 'SchoolController@postCreate');
+
+Route::get('/schools/students/{id}', 'SchoolController@viewStudents');

@@ -35,7 +35,7 @@ class StudentController extends Controller
       $student->student_reg = $request->input('student_reg');
       $student->dob = $request->input('dob');
       $student->profile_pix = $request->input('profile_pix');
-      $school->save();
+      $student->save();
 
       $user = Sentinel::registerAndActivate([
         'email'=>$student->email,

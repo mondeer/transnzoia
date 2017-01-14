@@ -5,6 +5,7 @@ namespace transcounty\Http\Controllers;
 use Illuminate\Http\Request;
 use transcounty\Schools;
 use Sentinel;
+use transcounty\Student;
 
 class SchoolController extends Controller
 {
@@ -32,6 +33,16 @@ class SchoolController extends Controller
     //   $role->users()->attach($user);
 
       dd($school);
+    }
+
+    public function viewStudents($id){
+        $school = Schools::find($id);
+
+        $students = Student::where('schools_id', $school->id)->get();
+
+        dd($students);
+
+
     }
 
 }
