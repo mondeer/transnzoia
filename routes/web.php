@@ -39,6 +39,8 @@ Route::get('/pages/students/profile', 'StudentController@profile');
 
 Route::get('/students/charts', 'StudentController@charts');
 
+// schools routing
+
 Route::get('/schools/create', 'SchoolController@create');
 
 Route::post('/schools/create', 'SchoolController@postCreate');
@@ -49,4 +51,4 @@ Route::post('/schools/login', 'SchoolController@postLogin');
 
 Route::get('/pages/schools/profile', 'SchoolController@profile');
 
-Route::get('/schools/students/{id}', 'SchoolController@viewStudents');
+Route::get('/schools/viewstudents', 'SchoolController@viewStudents');

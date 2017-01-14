@@ -43,7 +43,7 @@ class SchoolController extends Controller
       Sentinel::forceAuthenticate($request->all());
       return redirect('/pages/schools/profile');
     }
-    
+
     public function profile(){
       $school = Sentinel::getUser();
       $schprofile = Schools::where('email', $school->email)->get()->first();
@@ -51,12 +51,14 @@ class SchoolController extends Controller
       return view('/pages/schools/profile')->with(['schprofile'=>$schprofile]);
     }
 
-    public function viewStudents($id){
-        $school = Schools::find($id);
+    public function viewStudents(){
+
+        $school = Sentinel::getUser();
+        $school = Schools::where('email', $school->email)->get()->first();
 
         $students = Student::where('schools_id', $school->id)->get();
 
-        dd($students);
+        return view('pages.schools.viewstudents')->with('students', $students);
 
 
     }
