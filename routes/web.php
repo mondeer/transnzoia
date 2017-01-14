@@ -23,9 +23,7 @@ Route::get('/dashboard', function(){
   return view('admin.adminhome');
 });
 
-Route::get('/students/create', 'StudentController@Create');
-
-Route::post('/students/create', 'StudentController@postCreate');
+// students routing
 
 Route::get('/students/view', 'StudentController@view');
 
@@ -39,16 +37,21 @@ Route::get('/pages/students/profile', 'StudentController@profile');
 
 Route::get('/students/charts', 'StudentController@charts');
 
-// schools routing
+// county admin routing
 
 Route::get('/schools/create', 'SchoolController@create');
 
 Route::post('/schools/create', 'SchoolController@postCreate');
 
-Route::get('/schools/login', 'SchoolController@login');
+// schools admin routing
+Route::get('/pages/students/create', 'SchoolController@CreateStudent');
 
-Route::post('/schools/login', 'SchoolController@postLogin');
+Route::post('/pages/students/create', 'SchoolController@postCreateStudent');
 
-Route::get('/pages/schools/profile', 'SchoolController@profile');
+Route::get('/pages/schools/login', 'SchoolController@login');
 
-Route::get('/schools/viewstudents', 'SchoolController@viewStudents');
+Route::post('/pages/schools/login', 'SchoolController@postLogin');
+
+Route::get('/pages/schools/profile', 'SchoolController@profile')->middleware('admin');
+
+Route::get('/pages/schools/viewstudents', 'SchoolController@viewStudents');

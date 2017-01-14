@@ -1,4 +1,4 @@
-@extends ('admin.adminhome')
+@extends ('pages.schools.schoolhome')
 
 @section('content')
 
@@ -19,15 +19,15 @@
                     @endif
 
                     <form class="form-horizontal" role="form" method="POST" enctype="multipart/form-data"
-                          action="{{ url('/students/create') }}">
+                          action="{{ url('/pages/students/create') }}">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label class="col-md-4 control-label">schools Id</label>
                             <div class="col-md-6">
                                 <input type="number" class="form-control" name="schools_id" value="{{ old('schools_id') }}">
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="form-group">
                             <label class="col-md-4 control-label">Student First Name</label>

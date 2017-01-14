@@ -1,4 +1,4 @@
-@extends('admin.adminhome')
+@extends('pages.schools.schoolshome')
 
 @section('content')
   <div class="row">

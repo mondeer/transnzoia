@@ -1,4 +1,4 @@
-@extends('pages.students.studenthome')
+@extends('pages.schools.schoolhome')
 
 @section('content')
 <h3><i class="fa fa-angle-right"></i> Students </h3>
@@ -7,7 +7,7 @@
   <div class="row mt">
       <div class="col-lg-12">
           <div class="content-panel">
-            <a href="{{url('/students/create')}}" class="btn btn-info pull-right">Create New Student</a></br></br>
+            <a href="{{url('/pages/students/create')}}" class="btn btn-info pull-right">Create New Student</a></br></br>
               <table class="table table-striped table-positive table-hover">
 
                   <thead>

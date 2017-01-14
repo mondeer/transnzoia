@@ -44,7 +44,7 @@
 
               @if(!Sentinel::check())
               <ul class="fh5co-special" data-offcanvass="yes">
-              <form class="" action="{{ url ('/schools/login')}}" method="post">{{ csrf_field()}}
+              <form class="" action="{{ url ('/pages/schools/login')}}" method="post">{{ csrf_field()}}
                 <li><input type="text" name="email" placeholder="Email Address" value="{{ old('email') }}" required=""></li>
     						<li><input type="password" name="password" placeholder="password"value="{{ old('password') }}" required=""></li>
     						<li><button type="submit" name="btn btn-success">Login</button></li>
