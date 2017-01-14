@@ -33,13 +33,11 @@
                         </ul>
                     </li>
 
-                    <li><a><i class="fa fa-users"></i> User Management<span class="fa fa-chevron-down"></span></a>
+                    <li><a><i class="fa fa-dollar"></i> Fee Management<span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="#">Add Admin</a></li>
-                            <li><a href="#">Delete Admin</a></li>
-                            <li><a href="#">Add Student</a></li>
-                            <li><a href="#">Add Tutor</a></li>
-                            <li><a href="#">Delete Tutor</a></li>
+                            <li><a href="#">Pay Fee</a></li>
+                            <li><a href="#">Print Statement</a></li>
+                            <li><a href="#">Check Fee Balance</a></li>
                         </ul>
                     </li>
 
@@ -47,7 +45,7 @@
                     <li><a><i class="fa fa-hospital-o"></i> Manage Assets<span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <li><a href="#">Add an Asset</a></li>
-                            <li><a href="#">Approve Asset Acquisition</a></li>
+                            <li><a href="#">Request Asset Acquisition</a></li>
                             <li><a href="#">Auction Assets</a></li>
                         </ul>
                     </li>
@@ -62,57 +60,30 @@
                 </ul>
             </div>
             <div class="menu_section">
-                <h3>Institution Admin</h3>
+                <h3>Academics Admin</h3>
                 <ul class="nav side-menu">
-                    <li>
-                        <a><i class="fa fa-graduation-cap"></i> Students Management <span class="fa fa-chevron-down"></span></a>
-                        <ul class="nav child_menu">
-                            <li>
-                                <a href="#">Financials</a>
-                                <li>
-                                    <a>Admissions<span class="fa fa-chevron-down"></span></a>
-                                    <ul class="nav child_menu">
-                                        <li class="sub_menu">
-                                            <a href="/students/create">Add a student</a>
-                                        </li>
-                                        <li>
-                                            <a href="/students/view">View students</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Upload Timetable</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            <li>
-                                <a href="#">Admissions</a>
-                            </li>
-                        </ul>
-                    </li>
+                  <li><a><i class="fa fa-user"></i> Manage Tutors<span class="fa fa-chevron-down"></span></a>
+                      <ul class="nav child_menu">
+                          <li><a href="#">Approve Tutor Units</a></li>
+                          <li><a href="#">Allocate Tutor Units/a></li>
+                          <li><a href="#">Tutor Payment</a></li>
+                      </ul>
+                  </li>
 
-                    <li>
-                        <a><i class="fa fa-hospital-o"></i> Inventory Management <span class="fa fa-chevron-down"></span></a>
-                        <ul class="nav child_menu">
-                            <li>
-                                <a href="#"></a>
-                                <li>
-                                    <a>Asset Acquisition<span class="fa fa-chevron-down"></span></a>
-                                    <ul class="nav child_menu">
-                                        <li class="sub_menu">
-                                            <a href="#">Apply to acquire an asset</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Process a new asset</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"></a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            <li>
-                                <a href="#">Admissions</a>
-                            </li>
-                        </ul>
-                    </li>
+                  <li><a><i class="fa fa-puzzle-piece"></i> Manage Results<span class="fa fa-chevron-down"></span></a>
+                      <ul class="nav child_menu">
+                          <li><a href="#">Key In Results</a></li>
+                          <li><a href="#">View Results</a></li>
+                          <li><a href="#">Send Results To Students</a></li>
+                      </ul>
+                  </li>
+
+                  <li><a href="#">
+                      <i class="fa fa-clock-o"></i>
+                      Timetable Management
+                      <span class="label label-success pull-right">Units</span>
+                  </a>
+                  </li>
 
                 </ul>
             </div>

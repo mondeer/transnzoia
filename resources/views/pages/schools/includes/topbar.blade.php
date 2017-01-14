@@ -4,9 +4,24 @@
         <nav>
             <div class="nav toggle">
                 <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+
             </div>
 
+            <div class="pull-left">
+              <a href="/pages/schools/viewstudents" class="btn btn-success">View Students</a>
+              <a href="/pages/students/create" class="btn btn-success">Admit New Student</a>
+              <a href="#" class="btn btn-success">View Result</a>
+              <a class="btn btn-success" href="#">Pay School Fees</a>
+            </div>
+
+
+
+
             <ul class="nav navbar-nav navbar-right">
+
+
+
+
                 <li class="">
                     <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                         <img src="{{url('images/mond.jpg')}}" alt="">

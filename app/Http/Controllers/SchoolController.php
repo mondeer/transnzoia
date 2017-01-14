@@ -49,24 +49,31 @@ class SchoolController extends Controller
       $school = Sentinel::getUser();
       $schprofile = Schools::where('email', $school->email)->get()->first();
 
+      $students = Student::where('schools_id', $schprofile->id)->get();
 
-
-      $chart = Charts::database(Student::all(), 'pie', 'highcharts')
+      $chart = Charts::database($students, 'pie', 'highcharts')
          ->elementLabel("Courses")
          ->title('Courses')
-         ->dimensions(500, 250)
+         ->dimensions(400, 250)
          ->responsive(false)
          ->groupBy('course');
-      $courses = Charts::database(Student::all(), 'bar', 'chartjs')
+      $courses = Charts::database($students, 'bar', 'highcharts')
           ->elementLabel("Courses")
           ->title('Courses')
-          ->dimensions(500, 250)
+          ->dimensions(400, 250)
+          ->responsive(false)
+          ->groupBy('course');
+      $course = Charts::database($students, 'line', 'highcharts')
+          ->elementLabel("Courses")
+          ->title('Courses')
+          ->dimensions(400, 250)
           ->responsive(false)
           ->groupBy('course');
 
       return view('/pages/schools/profile')->with(array(
         'schprofile'=>$schprofile,
         'chart'=>$chart,
+        'course'=>$course,
         'courses'=>$courses
       ));
     }

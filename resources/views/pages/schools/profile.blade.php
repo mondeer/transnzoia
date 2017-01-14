@@ -2,19 +2,24 @@
 
 @section('content')
           <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-4 ">
                 {!! $chart->render() !!}
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-4">
+              <span></span>
                 {!! $courses->render() !!}
+            </div>
+            <div class="col-lg-4 ">
+                {!! $course->render() !!}
             </div>
           </div>
 
-          <div class="col-sm-10 col-sm-offset-1">
+          <div class="col-sm-10">
               <div style=" margin: 2%; text-align: center;">
-                  <a href="/pages/schools/viewstudents" class="btn btn-primary">View Students</a>
-                  <a href="#" class="btn btn-success">View Result</a>
-                  <a class="btn btn-danger" href="#">Pay School Fees</a>
+                  <a href="/pages/schools/viewstudents" class="call-to-action">View Students</a>
+                  <a href="/pages/students/create" class="call-to-action">Admit New Student</a>
+                  <a href="#" class="call-to-action">View Result</a>
+                  <a class="call-to-action" href="#">Pay School Fees</a>
               </div>
           </div>
 
