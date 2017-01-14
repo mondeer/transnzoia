@@ -35,6 +35,15 @@ class SchoolController extends Controller
       dd($school);
     }
 
+    public function login(){
+      return view('pages.schools.login');
+    }
+
+    public function postLogin(){
+      Sentinel::forceAuthenticate($request->all());
+      return redirect('/pages/schools/profile');
+    }
+
     public function viewStudents($id){
         $school = Schools::find($id);
 
