@@ -20,10 +20,10 @@ class StudentController extends Controller
     }
 
     public function postCreate(Request $request){
-      $school_id = $request->input('schools_id');
-      $school = Schools::find($school_id);
+      // $school_id = $request->input('schools_id');
+      // $school = Schools::find($school_id);
       $student = new Student;
-      // $student->schools_id = $request->input('schools_id');
+      $student->schools_id = $request->input('schools_id');
       $student->first_name = $request->input('first_name');
       $student->middle_name = $request->input('middle_name');
       $student->last_name = $request->input('last_name');
@@ -35,7 +35,7 @@ class StudentController extends Controller
       $student->student_reg = $request->input('student_reg');
       $student->dob = $request->input('dob');
       $student->profile_pix = $request->input('profile_pix');
-      $school->students()->save($student);
+      $school->save();
 
       $user = Sentinel::registerAndActivate([
         'email'=>$student->email,
@@ -94,8 +94,4 @@ class StudentController extends Controller
       return view('/pages/students/profile')->with(['stuprofile'=>$stuprofile]);
     }
 
-    // public function schools(){
-    //   $schools = Schools::all();
-    //   $students = 
-    // }
 }

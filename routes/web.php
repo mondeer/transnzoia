@@ -38,3 +38,7 @@ Route::post('/students/logout', 'StudentController@logout');
 Route::get('/pages/students/profile', 'StudentController@profile');
 
 Route::get('/students/charts', 'StudentController@charts');
+
+Route::get('/schools/create', 'SchoolController@create');
+
+Route::post('/schools/create', 'SchoolController@postCreate');

@@ -12,6 +12,7 @@ class CreateSchoolsTable extends Migration
             $table->increments('id');
               $table->string('registration');
               $table->string('name');
+              $table->string('email');
               $table->string('location');
               $table->date('reg_date');
             $table->timestamps();
