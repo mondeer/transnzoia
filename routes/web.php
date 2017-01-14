@@ -43,4 +43,10 @@ Route::get('/schools/create', 'SchoolController@create');
 
 Route::post('/schools/create', 'SchoolController@postCreate');
 
+Route::get('/schools/login', 'SchoolController@login');
+
+Route::post('/schools/login', 'SchoolController@postLogin');
+
+Route::get('/pages/schools/profile', 'SchoolController@profile');
+
 Route::get('/schools/students/{id}', 'SchoolController@viewStudents');

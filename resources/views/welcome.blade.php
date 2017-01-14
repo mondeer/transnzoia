@@ -50,7 +50,7 @@
   					<ul class="fh5co-special" data-offcanvass="yes">
               <li><a href="{{url ('/students/login')}}" class="call-to-action">Student Login</a></li>
   						<li><a href="#" class="call-to-action">Staff Login</a></li>
-  						<li><a href="#" class="call-to-action">Admin Login</a></li>
+  						<li><a href="/schools/login" class="call-to-action">Admin Login</a></li>
   					</ul>
             @endif
   				</div>

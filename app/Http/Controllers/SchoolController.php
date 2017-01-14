@@ -39,9 +39,16 @@ class SchoolController extends Controller
       return view('pages.schools.login');
     }
 
-    public function postLogin(){
+    public function postLogin(Request $request){
       Sentinel::forceAuthenticate($request->all());
       return redirect('/pages/schools/profile');
+    }
+    
+    public function profile(){
+      $school = Sentinel::getUser();
+      $schprofile = Student::where('email', $school->email)->get()->first();
+
+      return view('/pages/schools/profile')->with(['schprofile'=>$schprofile]);
     }
 
     public function viewStudents($id){
