@@ -15,6 +15,10 @@ class CreateStudentsTable extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('schools_id');
+                $table->foreign('schools_id')
+                ->references('id')->on('schools')
+                ->onDelete('cascade');
               $table->string('first_name');
               $table->string('middle_name');
               $table->string('last_name');
@@ -29,15 +33,6 @@ class CreateStudentsTable extends Migration
             $table->timestamps();
         });
 
-        Schema::create('schools_students', function (Blueprint $table) {
-            $table->integer('school_id')->unsigned();
-            $table->integer('student_id')->unsigned();
-            $table->nullableTimestamps();
-
-            $table->engine = 'InnoDB';
-            $table->primary(['school_id', 'student_id']);
-        });
-
     }
 
     /**
@@ -48,7 +43,6 @@ class CreateStudentsTable extends Migration
     public function down()
     {
         Schema::dropIfExists('students');
-        Schema::dropIfExists('schools_students');
     }
 
 }

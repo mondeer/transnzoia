@@ -3,7 +3,7 @@
 namespace transcounty\Http\Controllers;
 
 use Illuminate\Http\Request;
-use transcounty\Students;
+use transcounty\Student;
 use DB;
 use Sentinel;
 use Charts;
@@ -20,8 +20,10 @@ class StudentController extends Controller
     }
 
     public function postCreate(Request $request){
-
-      $student = new Students;
+      $school_id = $request->input('schools_id');
+      $school = Schools::find($school_id);
+      $student = new Student;
+      // $student->schools_id = $request->input('schools_id');
       $student->first_name = $request->input('first_name');
       $student->middle_name = $request->input('middle_name');
       $student->last_name = $request->input('last_name');
@@ -33,7 +35,7 @@ class StudentController extends Controller
       $student->student_reg = $request->input('student_reg');
       $student->dob = $request->input('dob');
       $student->profile_pix = $request->input('profile_pix');
-      $student->save();
+      $school->students()->save($student);
 
       $user = Sentinel::registerAndActivate([
         'email'=>$student->email,
@@ -41,16 +43,12 @@ class StudentController extends Controller
         'first_name'=>$student->first_name,
         'last_name'=>$student->last_name
       ]);
-
-      $student->school_name = $request->input('school_name');
-      $school = Schools::where('name', $student)->get()->first();
-      $school->schools()->attach($school);
       
       return redirect('/students/view');
     }
 
     public function view(Request $request){
-      $students = Students::all();
+      $students = Student::all();
       return view('admin.students.view')->with('students', $students);
       // return ($students);
     }
@@ -73,13 +71,13 @@ class StudentController extends Controller
     }
 
     public function charts(){
-      $chart = Charts::database(Students::all(), 'pie', 'google')
+      $chart = Charts::database(Student::all(), 'pie', 'google')
          ->elementLabel("Courses")
          ->title('Courses')
          ->dimensions(1000, 500)
          ->responsive(false)
          ->groupBy('course');
-      $courses = Charts::database(Students::all(), 'bar', 'google')
+      $courses = Charts::database(Student::all(), 'bar', 'google')
           ->elementLabel("Courses")
           ->title('Courses')
           ->dimensions(1000, 500)
@@ -91,8 +89,13 @@ class StudentController extends Controller
 
     public function profile(){
       $student = Sentinel::getUser();
-      $stuprofile = Students::where('email', $student->email)->get()->first();
+      $stuprofile = Student::where('email', $student->email)->get()->first();
 
       return view('/pages/students/profile')->with(['stuprofile'=>$stuprofile]);
     }
+
+    // public function schools(){
+    //   $schools = Schools::all();
+    //   $students = 
+    // }
 }

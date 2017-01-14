@@ -23,9 +23,9 @@
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                         <div class="form-group">
-                            <label class="col-md-4 control-label">schools name</label>
+                            <label class="col-md-4 control-label">schools Id</label>
                             <div class="col-md-6">
-                                <input type="text" class="form-control" name="schools_name" value="{{ old('schools_name') }}">
+                                <input type="number" class="form-control" name="schools_id" value="{{ old('schools_id') }}">
                             </div>
                         </div>
 
