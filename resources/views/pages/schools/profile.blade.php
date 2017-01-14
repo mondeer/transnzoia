@@ -5,7 +5,7 @@
               <div class="col-sm-8 col-sm-offset-2">
                   <div class="col-sm-4 col-sm-offset-4">
                       <img src="{{asset('/images/mond.jpg')}}" class="img-circle">
-                      <h2>{!! $stuprofile->first_name !!} </h2>
+                      <h2>Jkuat </h2>
                   </div>
               </div>
 
@@ -17,11 +17,10 @@
                       <div class="panel panel-body">
                         <table>
                           <td>
-                            <p>Gender: {{$stuprofile->gender}}</p>
-                            <p>Reg. No. : {{$stuprofile->student_reg}}</p>
-                            <p>Course Enrolled. : {{$stuprofile->course}}</p>
-                            <p>Class: {{$stuprofile->dob}}</p>
-                            <p>Phone: {{$stuprofile->mobile}} </p>
+                            <p>School Reg: {{$schprofile->registration}}</p>
+                            <p>Located at. : {{$schprofile->location}}</p>
+                            <p>Course Enrolled. : {{$schprofile->name}}</p>
+                            <p>Registered on: {{$schprofile->reg_date}}</p>
                           </td>
                         </table>
 

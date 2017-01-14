@@ -46,7 +46,7 @@ class SchoolController extends Controller
     
     public function profile(){
       $school = Sentinel::getUser();
-      $schprofile = Student::where('email', $school->email)->get()->first();
+      $schprofile = Schools::where('email', $school->email)->get()->first();
 
       return view('/pages/schools/profile')->with(['schprofile'=>$schprofile]);
     }
