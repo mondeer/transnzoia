@@ -19,7 +19,7 @@
           </div>
 
           <div class="row">
-              <div class="col-sm-8 col-sm-offset-2">
+              <div class="col-sm-6">
                   <div class="col-sm-4">
                       <img src="{{asset('/images/github.png')}}" class="img-circle">
 
