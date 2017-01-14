@@ -13,10 +13,9 @@
             </div>
             <div class="profile_info">
                 <span>Welcome,</span>
-                <h2>Laban</h2>
+                <h2>{{ Sentinel::getUser()->last_name}}</h2>
             </div>
         </div>
-        <!-- /menu profile quick info -->
 
         <br />
 
@@ -36,9 +35,9 @@
 
                     <li><a><i class="fa fa-users"></i> User Management<span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="">Add Admin</a></li>
+                            <li><a href="#">Add Admin</a></li>
                             <li><a href="#">Delete Admin</a></li>
-                            <li><a href="#s">Add Student</a></li>
+                            <li><a href="#">Add Student</a></li>
                             <li><a href="#">Add Tutor</a></li>
                             <li><a href="#">Delete Tutor</a></li>
                         </ul>
@@ -122,7 +121,7 @@
         <!-- /sidebar menu -->
 
         <!-- /menu footer buttons -->
-        <div class="sidebar-footer hidden-small">
+        <div class="sidebar-footer hidden-large">
             <a data-toggle="tooltip" data-placement="top" title="Settings">
                 <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
             </a>
@@ -132,8 +131,12 @@
             <a data-toggle="tooltip" data-placement="top" title="Lock">
                 <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
             </a>
-            <a data-toggle="tooltip" data-placement="top" title="Logout" href="{{ url('/logout') }}">
-                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+            <a data-toggle="tooltip" data-placement="top" title="Logout" href="#">
+              <form class="" action="{{ url ('/students/logout')}}" method="POST" id='logout-form'>
+                {{ csrf_field() }}
+                <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-off" aria-hidden="true"></span></button>
+              </form>
+
             </a>
         </div>
         <!-- /menu footer buttons -->

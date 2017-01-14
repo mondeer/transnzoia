@@ -35,6 +35,6 @@ Route::post('/students/login', 'StudentController@postLogin');
 
 Route::post('/students/logout', 'StudentController@logout');
 
-Route::get('/pages/students/profile', 'StudentController@index');
+Route::get('/pages/students/profile', 'StudentController@profile');
 
 Route::get('/students/charts', 'StudentController@charts');

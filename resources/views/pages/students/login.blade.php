@@ -41,25 +41,43 @@
   					</ul>
   				</div> -->
   				<div class="col-lg-6 col-md-6 col-sm-4 pull-right text-right fh5co-link-wrap">
-  					<ul class="fh5co-special" data-offcanvass="yes">
+
               @if(!Sentinel::check())
+              <ul class="fh5co-special" data-offcanvass="yes">
               <form class="" action="{{ url ('/students/login')}}" method="post">{{ csrf_field()}}
                 <li><input type="text" name="email" placeholder="Email Address" value="{{ old('email') }}" required=""></li>
     						<li><input type="password" name="password" placeholder="password"value="{{ old('password') }}" required=""></li>
     						<li><button type="submit" name="btn btn-success">Login</button></li>
               </form>
+            </ul>
               @else
-              <li><a>
-                Hello {{ Sentinel::getUser()->first_name}}
-              </a></li>
+              <ul class="fh5co-special" data-offcanvass="yes">
+              <li>
+                <a href="#">Hello {{ Sentinel::getUser()->first_name}}</a>
+              </li>
               <li><form class="" action="{{ url ('/students/logout')}}" method="POST" id='logout-form'>
                 {{ csrf_field() }}
                 <button type="submit" class="btn btn-danger">Logout</button>
               </form></li>
 
-              @endif
+
+
+
   					</ul>
   				</div>
+
+          <div role="tabpanel" class="col-lg-12 fh5co-link-wrap">
+            <ul class="fh5co-special">
+              <li><a href="/site/home" class="btn btn-succes"><i class="fa fa-home"></i> Home</a></li>
+              <li><a href="/FeeStatement/index"><i class="fa fa-dollar"></i> Fee Statement</a></li>
+              <li><a href="/Exam/index"><i class="fa fa-pencil"></i>Exam Results</a></li>
+              <li><a href="/RegUnits/index"><i class="fa fa-paperclip"></i>Units Registration</a></li>
+              <li><a href="/Library/index"><i class="fa fa-book"></i>Library</a></li>
+              <li><a href="/StudentID/index"><i class="fa fa-user"></i>Student ID</a></li>
+              <li><a target="_BLANK" href="#"><i class="fa fa-stack"></i>Past Papers &amp; Passlists</a></li>
+            </ul>
+          </div>
+          @endif
   			</div>
   		</nav>
 
@@ -75,12 +93,13 @@
   				<div class="container">
   					<div class="row">
 
-  						<div class="col-md-12 full-height js-full-height align-center">
+  						<div class="col-md-6 col-md-offset-3 full-height js-full-height align-center">
   							<div class="fh5co-cover-intro text-center">
-                  <h1 class="cover-text-lead">Student Login</h1>
+                  <h1 class="cover-text-lead">Why use the portal?</h1>
                   <div class="cover-text-sublead wow fadeInUp">
-                    <h2 class="cover-text-sublead wow fadeInUp">In order to achieve the vision 2030 and</br>
-                      the sustainable development goals, education should </br>be viewed on wider spectrum, and thats the agenda in Trans Nzoia County.</h2>
+                    <h2 class="cover-text-sublead wow fadeInUp">This online students' portal helps students access fundamental services
+                      offered in the polytechnics. You can now access your fee statement, posted exam results, register units,
+                      track status of your student ID processing and so much more. Take this opportunity to enjoy improved service delivery! </h2>
                   </div>
 
 

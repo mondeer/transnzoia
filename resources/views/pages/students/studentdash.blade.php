@@ -23,9 +23,10 @@
 
       <link rel="shortcut icon" href="{{ asset ('imondcorp.ico')}}">
 
-      {!! Charts::assets() !!}
+      <!-- {!! Charts::assets() !!} -->
               <!-- Bootstrap -->
         <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
+        
         <!-- Font Awesome -->
         <link href="{{asset('css/font-awesome.min.css')}}" rel="stylesheet">
         <!-- Custom Theme Style -->
@@ -40,9 +41,9 @@
         <div class="container body">
             <div class="main_container">
 
-                @include('admin/includes/sidebar')
+                @include('pages/students/includes/sidebar')
 
-                @include('admin/includes/topbar')
+                @include('pages/students/includes/topbar')
 
                 @yield('main_container')
 
@@ -51,7 +52,7 @@
 
         <footer class="imond">
             <div class="pull-right">
-                Trans Nzoia County Education System by <a href="https://afrobay.co.ke">InFed</a>
+                System By <a href="https://afrobay.co.ke">Infed</a>
             </div>
             <div class="clearfix"></div>
         </footer>

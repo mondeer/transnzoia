@@ -9,8 +9,7 @@
           <div class="content-panel">
             <a href="{{url('/students/create')}}" class="btn btn-info pull-right">Create New Student</a></br></br>
               <table class="table table-striped table-positive table-hover">
-                  {{--<h4><i class="fa fa-angle-right"></i> Advanced Table</h4>
-                  <hr>--}}
+                  
                   <thead>
                   <tr>
                       <th><i class="fa fa-user"></i> Id.</th>

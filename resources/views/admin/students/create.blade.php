@@ -23,6 +23,13 @@
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                         <div class="form-group">
+                            <label class="col-md-4 control-label">schools name</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="schools_name" value="{{ old('schools_name') }}">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
                             <label class="col-md-4 control-label">Student First Name</label>
                             <div class="col-md-6">
                                 <input type="text" class="form-control" name="first_name" value="{{ old('first_name') }}">
@@ -72,6 +79,7 @@
                         </div>
 
 
+
                         <div class="form-group">
                             <label class="col-md-4 control-label">Gender</label>
                             <div class="col-md-6">
@@ -114,7 +122,7 @@
         </div><!-- /col-lg-12 -->
 
         <div class="col-lg-6">
-      
+
         </div>
 
     </div><!-- /row -->

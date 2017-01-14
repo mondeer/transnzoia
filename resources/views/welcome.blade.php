@@ -1,4 +1,4 @@
-rve<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -41,13 +41,18 @@ rve<!DOCTYPE html>
   					</ul>
   				</div> -->
   				<div class="col-lg-6 col-md-6 col-sm-4 pull-right text-right fh5co-link-wrap">
+            @if(Sentinel::check())
+            <ul class="fh5co-special" data-offcanvass="yes">
+              <li><a href="{{url ('/pages/students/profile')}}" class="call-to-action">Student Portal</a></li>
+              <li><a href="#" class="call-to-action">Tour The County</a></li>
+            </ul>
+            @else
   					<ul class="fh5co-special" data-offcanvass="yes">
-              @if(!Sentinel::check())
-              <li><a href="{{ url ('/students/login')}}">Student Login</a></li>
-  						<li><a href="#">Staff Login</a></li>
+              <li><a href="{{url ('/students/login')}}" class="call-to-action">Student Login</a></li>
+  						<li><a href="#" class="call-to-action">Staff Login</a></li>
   						<li><a href="#" class="call-to-action">Admin Login</a></li>
-              @endif
   					</ul>
+            @endif
   				</div>
   			</div>
   		</nav>

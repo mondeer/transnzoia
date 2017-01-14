@@ -28,6 +28,16 @@ class CreateStudentsTable extends Migration
               $table->string('profile_pix')->default('default.jpg');
             $table->timestamps();
         });
+
+        Schema::create('schools_students', function (Blueprint $table) {
+            $table->integer('school_id')->unsigned();
+            $table->integer('student_id')->unsigned();
+            $table->nullableTimestamps();
+
+            $table->engine = 'InnoDB';
+            $table->primary(['school_id', 'student_id']);
+        });
+
     }
 
     /**
@@ -38,5 +48,7 @@ class CreateStudentsTable extends Migration
     public function down()
     {
         Schema::dropIfExists('students');
+        Schema::dropIfExists('schools_students');
     }
+
 }
