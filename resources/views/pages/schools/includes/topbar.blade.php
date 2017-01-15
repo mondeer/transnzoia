@@ -22,10 +22,10 @@
                 <ul >
 
                   <!-- <> -->
-                      <div class=" pull-right">
+                      <div class="imon">
                         <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                             <img src="{{url('images/mond.jpg')}}" alt="">
-                            Laban
+                            <h2>{{Sentinel::getUser()->first_name }}</h2>
                             <span class=" fa fa-angle-down"></span>
                         </a>
                         <ul class="dropdown-menu dropdown-usermenu">
