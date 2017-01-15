@@ -9,6 +9,7 @@ class CreateSchoolsTable extends Migration
     public function up()
     {
         Schema::create('schools', function (Blueprint $table) {
+           
             $table->increments('id');
               $table->string('registration')->unique();
               $table->string('name');
@@ -19,7 +20,7 @@ class CreateSchoolsTable extends Migration
         });
 
         Schema::create('students', function (Blueprint $table) {
-            $table->engine = 'InnoDB';
+            
             $table->increments('id');
               $table->integer('schools_id')->unsigned()->nullable();
               $table->string('first_name');
@@ -36,12 +37,12 @@ class CreateSchoolsTable extends Migration
             $table->timestamps();
         });
 
-        Schema::create('students', function(Blueprint $table){
-            $table->engine = 'InnoDB';
-                $table->foreign('schools_id')
-                ->references('id')->on('schools')
-                ->onDelete('cascade');
-        });
+        // Schema::create('students', function(Blueprint $table){
+            
+        //         $table->foreign('schools_id')
+        //         ->references('id')->on('schools')
+        //         ->onDelete('cascade');
+        // });
     }
 
     public function down()

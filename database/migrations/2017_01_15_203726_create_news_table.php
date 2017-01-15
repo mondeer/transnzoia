@@ -14,17 +14,14 @@ class CreateNewsTable extends Migration
     public function up()
     {
         Schema::create('news', function (Blueprint $table) {
+            
             $table->increments('id');
               $table->integer('school_id')->unsigned()->nullable();
               $table->string('title');
-              $tabble->varchar('content');
+              $table->text('content');
             $table->timestamps();
-        });
 
-        Schema::create('news', function (Blueprint $table) {
-          $table->foreign('school_id')
-          ->references('id')->on('schools')
-          ->onDelete('cascade')
+            $table->engine = 'InnoDB';
         });
     }
 

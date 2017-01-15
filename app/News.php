@@ -6,10 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class News extends Model
 {
-    $fillable = ['school_id', 'title', 'content'];
+    protected $fillable = ['school_id', 'title', 'content'];
 
-    public function schools(){
-      return $this->belongsTo('transcountty\Schools');
+    public function school(){
+      return $this->belongsTo('transcountty\Schools', 'school_id');
 
     }
 }
