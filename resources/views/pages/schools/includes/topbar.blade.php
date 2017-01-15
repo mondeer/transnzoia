@@ -11,9 +11,9 @@
               <div class="col-lg-5 text-center fh5co-link-wrap">
 
                 <ul data-offcanvass="yes">
-                  <li><a href="{{url ('/students/login')}}" class="call-to-action">View Students</a></li>
-                  <li><a href="#" class="call-to-action">Admit New Student</a></li>
-                  <li><a href="/pages/schools/login" class="call-to-action">View Results</a></li>
+                  <li><a href="{{url ('/pages/schools/viewstudents')}}" class="call-to-action">View Students</a></li>
+                  <li><a href="/pages/students/create" class="call-to-action">Admit New Student</a></li>
+                  <li><a href="#" class="call-to-action">View Results</a></li>
                 </ul>
               </div>
 
