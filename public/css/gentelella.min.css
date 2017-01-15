@@ -6,7 +6,7 @@
  * License: MIT
  */.tabs-left,.tabs-right{border-bottom:none;padding-top:2px}.call-to-action {
    margin-top:5px;
-   margin-bottom: 10;
+   margin-bottom: 0;
    /*border: 2px solid #58ca7e;*/
    background: #18A497;
    padding: 5px 5px !important;
@@ -24,6 +24,11 @@
 
  .imon{
    margin-top:10px;
+
+ }
+
+ .imo{
+
    color: #ffffff;
  }
 

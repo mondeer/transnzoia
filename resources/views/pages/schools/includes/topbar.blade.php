@@ -19,14 +19,17 @@
 
               <div class="col-lg-6 imon">
 
-                <ul >
+                <ul class="nav navbar-nav navbar-right">
 
-                  <!-- <> -->
-                      <div class="imon">
-                        <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                  <li>
+                      <!-- <div class="pull-right"> -->
+                        <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" >
+
+                          <p class="imo">
                             <img src="{{url('images/mond.jpg')}}" alt="">
-                            <h2>{{Sentinel::getUser()->first_name }}</h2>
-                            <span class=" fa fa-angle-down"></span>
+                            {{Sentinel::getUser()->first_name }}<span class=" fa fa-angle-down"></span>
+                          </p>
+
                         </a>
                         <ul class="dropdown-menu dropdown-usermenu">
                             <li><a href="javascript:;"> Profile</a></li>
@@ -39,10 +42,10 @@
                             <li><a href="javascript:;">Help</a></li>
                             <li><a href="{{ url('/logout') }}"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                         </ul>
-                      </div>
-                    <!-- </li> -->
+                      <!-- </div> -->
+                    </li>
 
-                    <!-- <li role="presentation" class="dropdown">
+                    <li role="presentation" class="dropdown">
                         <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
                             <i class="fa fa-envelope-o"></i>
                             <span class="badge bg-green">6</span>
@@ -105,7 +108,7 @@
                                 </div>
                             </li>
                         </ul>
-                    </li> -->
+                    </li>
                 </ul>
 
               </div>
