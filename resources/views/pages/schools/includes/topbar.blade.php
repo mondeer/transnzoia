@@ -1,33 +1,34 @@
 <!-- top navigation -->
 <div class="top_nav imonda">
     <div class="nav_menu imonda">
-        <nav class="fh5co-nav-style-1 nav" >
+        <nav class="fh5co-nav-style-1 imonda " role="navigation" data-offcanvass-position="fh5co-offcanvass-left">
             <!-- <div class="container"> -->
               <div class="nav toggle">
                   <a id="menu_toggle"><i class="fa fa-bars"></i></a>
 
               </div>
 
-              <div class="col-lg-4 col-lg-offset-2 imonda text-center fh5co-link-wrap">
+              <div class="col-lg-5 text-center fh5co-link-wrap">
 
-                <ul class="fh5co-special" data-offcanvass="yes">
+                <ul data-offcanvass="yes">
                   <li><a href="{{url ('/students/login')}}" class="call-to-action">View Students</a></li>
                   <li><a href="#" class="call-to-action">Admit New Student</a></li>
                   <li><a href="/pages/schools/login" class="call-to-action">View Results</a></li>
                 </ul>
               </div>
 
-              <div class="col-lg-4 fh5co-link-wrap">
+              <div class="col-lg-6 imon">
 
-                <ul class="fh5co-special" data-offcanvass="yes">
+                <ul >
 
-                  <li>
+                  <!-- <> -->
+                      <div class=" pull-right">
                         <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                             <img src="{{url('images/mond.jpg')}}" alt="">
                             Laban
                             <span class=" fa fa-angle-down"></span>
                         </a>
-                        <ul class="dropdown-menu dropdown-usermenu pull-right">
+                        <ul class="dropdown-menu dropdown-usermenu">
                             <li><a href="javascript:;"> Profile</a></li>
                             <li>
                                 <a href="javascript:;">
@@ -38,9 +39,10 @@
                             <li><a href="javascript:;">Help</a></li>
                             <li><a href="{{ url('/logout') }}"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                         </ul>
-                    </li>
+                      </div>
+                    <!-- </li> -->
 
-                    <li role="presentation" class="dropdown">
+                    <!-- <li role="presentation" class="dropdown">
                         <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
                             <i class="fa fa-envelope-o"></i>
                             <span class="badge bg-green">6</span>
@@ -103,7 +105,7 @@
                                 </div>
                             </li>
                         </ul>
-                    </li>
+                    </li> -->
                 </ul>
 
               </div>
