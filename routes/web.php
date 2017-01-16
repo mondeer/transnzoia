@@ -37,6 +37,8 @@ Route::get('/pages/students/profile', 'StudentController@profile');
 
 Route::get('/students/charts', 'StudentController@charts');
 
+Route::get('/pages/students/news', 'NewsController@show');
+
 // county admin routing
 
 Route::get('/schools/create', 'SchoolController@create');
@@ -55,3 +57,7 @@ Route::post('/pages/schools/login', 'SchoolController@postLogin');
 Route::get('/pages/schools/profile', 'SchoolController@profile')->middleware('admin');
 
 Route::get('/pages/schools/viewstudents', 'SchoolController@viewStudents');
+
+Route::get('/pages/schools/newscreate', 'NewsController@Create');
+
+Route::post('/pages/schools/newscreate', 'NewsController@postCreate');

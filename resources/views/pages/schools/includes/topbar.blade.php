@@ -13,7 +13,7 @@
                 <ul data-offcanvass="yes">
                   <li><a href="{{url ('/pages/schools/viewstudents')}}" class="call-to-action">View Students</a></li>
                   <li><a href="/pages/students/create" class="call-to-action">Admit New Student</a></li>
-                  <li><a href="#" class="call-to-action">View Results</a></li>
+                  <li><a href="/pages/schools/newscreate" class="call-to-action">Post News</a></li>
                 </ul>
               </div>
 
@@ -48,20 +48,11 @@
                     <li role="presentation" class="dropdown">
                         <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
                             <i class="fa fa-envelope-o"></i>
-                            <span class="badge bg-green">6</span>
+                            <span class="badge bg-green">{{  }}</span>
                         </a>
                         <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
                             <li>
-                                <a>
-                                    <span class="image"><img src="{{ url ('images/mond.jpg')}}" alt="Profile Image" /></span>
-                                    <span>
-                              <span>John Smith</span>
-                              <span class="time">3 mins ago</span>
-                            </span>
-                                    <span class="message">
-                              Film festivals used to be do-or-die moments for movie makers. They were where...
-                            </span>
-                                </a>
+
                             </li>
                             <li>
                                 <a>
